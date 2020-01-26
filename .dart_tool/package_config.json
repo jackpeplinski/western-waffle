@@ -32,6 +32,18 @@
       "languageVersion": "1.0"
     },
     {
+      "name": "charts_common",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/charts_common-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "charts_flutter",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/charts_flutter-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "1.23"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11",
       "packageUri": "lib/",
@@ -70,6 +82,18 @@
     {
       "name": "image",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/logging-0.11.4",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -176,7 +200,7 @@
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-01-11T17:06:07.379095Z",
+  "generated": "2020-01-21T02:36:30.998493Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }

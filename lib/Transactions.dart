@@ -1,9 +1,5 @@
 import 'package:flutter/material.dart';
-import 'transaction.dart';
-
-void main() => runApp(MaterialApp(
-  home: TransactionsPage(),
-));
+import 'TransactionsClass.dart';
 
 class TransactionsPage extends StatefulWidget {
   @override
