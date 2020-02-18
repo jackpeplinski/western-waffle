@@ -1,6 +1,5 @@
 //creates the transactions page
 import 'package:flutter/material.dart';
-import 'TransactionsClass.dart';
 
 class TransactionsPage extends StatefulWidget {
   @override
@@ -9,8 +8,8 @@ class TransactionsPage extends StatefulWidget {
 
 class _TransactionsPageState extends State<TransactionsPage> { 
   List<Transaction> transactions = [ //data goes here
-    Transaction(type:'Buy', location:'Medway-Sydenham', charge:"500", date:"2020-01-01"),
-    Transaction(type:'Buy', location: 'Delaware', charge:"600", date:"2020-01-01"),
+    Transaction('Buy', 'Medway-Sydenham', "500", "2020-01-01"),
+    Transaction('Buy', 'Delaware', "600", "2020-01-01"),
   ];
 
   Widget transactionTemplate(transaction){
@@ -72,4 +71,13 @@ class _TransactionsPageState extends State<TransactionsPage> {
       )
     );
   }
+}
+
+class Transaction {
+  String transactionType;
+  String location;
+  String charge;
+  String date;
+  
+  Transaction(this.transactionType, this.location, this.charge, this.date);
 }

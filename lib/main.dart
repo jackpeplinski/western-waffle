@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import './Home.dart';
-import './Transactions.dart';
+import './transactionsPage.dart';
 import './locationSpending.dart';
 
 void main() => runApp(WesternFood());
