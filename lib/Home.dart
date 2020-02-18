@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import './spendingRate.dart';
 
 class Home extends StatefulWidget {
   @override
@@ -8,14 +9,15 @@ class Home extends StatefulWidget {
 class _HomeState extends State<Home> {
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-            children: <Widget>[
-              Text('There will be a graph here one day.',),
-            ],
+    return MaterialApp(
+      home: Scaffold(
+        //background and AppBar
+        backgroundColor: Colors.grey,
+        appBar: AppBar(
+          title: Text('Home'),
         ),
+      //SpendingRate also contains the balance card
+      body: SpendingRate(),
       ),
     );
   }

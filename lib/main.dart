@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import './Home.dart';
 import './Transactions.dart';
+import './locationSpending.dart';
 
 void main() => runApp(WesternFood());
 
@@ -10,47 +11,46 @@ class WesternFood extends StatefulWidget {
 }
 
 class _WesternFoodState extends State<WesternFood> {
-  //underscore variables e.g. '_selectedTab' are only variables in the page where they are present 
+
+  //intializes, declares, assigns var (the zero is arbitrary)
   int _selectedTab = 0;
-  final _potentialTabs = [
+  final List<Widget> _potentialTabs = [
     //pages here must be listed in the same order that they are listed in the navigation bar widget below
     Home(),
     TransactionsPage(),
-    //Settings(),
+    LocationSpending(),
   ];
+
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        //???don't understand syntax for body below
+        //access _selectedTab from the list of _potentialTabs
         body: _potentialTabs[_selectedTab],
-        //???isn't it redundant to have 'bottomNavigationBar: BottomNavigationBar(' why not just 'BottomNavigationBar('
         bottomNavigationBar: BottomNavigationBar(
           currentIndex: _selectedTab,
-          //don't understand syntax for onTap below
+          //change page displayed to _selectedTab .
           onTap:(int index){
             setState((){
               _selectedTab = index;
-            });//setState
-          },//onTap
+            }); //setState
+          }, //onTap
           items: [
             BottomNavigationBarItem(
               icon: Icon(Icons.home),
               title: Text('Home'),
             ),
             BottomNavigationBarItem(
-            //could also use .access_time as an icon and then use .attach_money as icon for adding profits
               icon: Icon(Icons.attach_money),
               title: Text('Transactions'),
             ),
-            //uncomment to the following section when settings has been added
-            /*BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
-            ),*/
-          ], //items
+             BottomNavigationBarItem(
+              icon: Icon(Icons.map),
+              title: Text('Location Spending'),
+            ),
+          ], 
         ),
       ),
     );
-  }
-}
+  } 
+} 

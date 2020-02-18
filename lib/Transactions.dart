@@ -1,3 +1,4 @@
+//creates the transactions page
 import 'package:flutter/material.dart';
 import 'TransactionsClass.dart';
 
@@ -6,10 +7,10 @@ class TransactionsPage extends StatefulWidget {
   _TransactionsPageState createState() => _TransactionsPageState();
 }
 
-class _TransactionsPageState extends State<TransactionsPage> {
-
-  List<Transaction> transactions = [
-    Transaction(type:'Buy', location:'Medway-Sydenham', charge:"500", date:"2020-01-01")
+class _TransactionsPageState extends State<TransactionsPage> { 
+  List<Transaction> transactions = [ //data goes here
+    Transaction(type:'Buy', location:'Medway-Sydenham', charge:"500", date:"2020-01-01"),
+    Transaction(type:'Buy', location: 'Delaware', charge:"600", date:"2020-01-01"),
   ];
 
   Widget transactionTemplate(transaction){
@@ -66,6 +67,7 @@ class _TransactionsPageState extends State<TransactionsPage> {
         title: Text('Transactions'),
       ),
       body: Column(
+        //makes transactions card appear on screen
         children: transactions.map((transaction) => transactionTemplate(transaction)).toList(),
       )
     );
