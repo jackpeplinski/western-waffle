@@ -1,4 +1,4 @@
-name: western_food
+name: wfn2
 description: A new Flutter project.
 
 # The following defines the version and build number for your application.
@@ -19,6 +19,7 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  provider: ^4.0.4
 
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.
