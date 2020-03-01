@@ -1,130 +1,58 @@
 import 'package:flutter/material.dart';
-import 'package:provider/provider.dart';
-import '../blocs/theme.dart';
-import './send_feedback.dart';
-import 'package:url_launcher/url_launcher.dart';
+import '../spendingRate.dart';
+import '../transactionsPage.dart';
+import '../locationSpending.dart';
+import './settingsPage.dart';
 
-class HomePage extends StatelessWidget {
-  _launchURL() async {
-    const url = 'https://www.mealplan.uwo.ca/topup/';
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  } //opens the URL
+class Home extends StatefulWidget {
+  @override
+  _HomeState createState() => _HomeState();
+}
 
-  Widget buildListTile(String title, IconData icon, Function tapHandler) {
-    return ListTile(
-      leading: Icon(
-        icon,
-        size: 26.0,
-      ),
-      title: Text(
-        title,
-        style: TextStyle(
-          fontFamily: 'RobotoCondensed',
-          fontSize: 20.0,
-          fontWeight: FontWeight.bold,
-        ),
-      ),
-      onTap: tapHandler,
-    );
-  }
+class _HomeState extends State<Home> {
+
+//intializes, declares, assigns var (the zero is arbitrary)
+  int _selectedTab = 0;
+  final List<Widget> _potentialTabs = [
+    //pages here must be listed in the same order that they are listed in the navigation bar widget below
+    SpendingRate(),
+    TransactionsPage(),
+    LocationSpending(),
+    SettingsPage(),
+  ];
 
   @override
   Widget build(BuildContext context) {
-    ThemeChanger _themeChanger = Provider.of<ThemeChanger>(context);
-
-    return Scaffold(
-      appBar: AppBar(
-        title: Text("Settings Page"),
-      ),
-      body: Container(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.stretch,
-          //mainAxisAlignment: MainAxisAlignment.spaceEvenly,
-          children: <Widget>[
-            Card(
-              elevation: 5.0,
-              margin: EdgeInsets.all(20.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0)),
-              child: Column(
-                children: <Widget>[
-                  SizedBox(
-                    height: 10.0,
-                  ),
-                  Text(
-                    "Themes",
-                    style: TextStyle(
-                      fontWeight: FontWeight.bold,
-                      fontSize: 30.0,
-                    ),
-                  ),
-                  buildListTile(
-                    "Dark Theme",
-                    Icons.invert_colors,
-                    () => _themeChanger.setTheme(ThemeData.dark()),
-                  ), //sets the theme to dark
-                  buildListTile(
-                    "Light Theme",
-                    Icons.invert_colors,
-                    () => _themeChanger.setTheme(ThemeData.light().copyWith(
-                      accentColor: Colors.orange,
-                    )),
-                  ), //sets the theme to light
-                  buildListTile(
-                    "Western Theme",
-                    Icons.invert_colors,
-                    () => _themeChanger.setTheme(
-                      ThemeData(
-                        primaryColor: Colors.purple,
-                        canvasColor: Colors.white,
-                        accentColor: Colors.yellow,
-                      ),
-                    ),
-                  ), //sets the theme to dark
-                ],
-              ),
+    return  Scaffold(
+        //access _selectedTab from the list of _potentialTabs
+        body: _potentialTabs[_selectedTab],
+        bottomNavigationBar: BottomNavigationBar(
+          currentIndex: _selectedTab,
+          //change page displayed to _selectedTab .
+          onTap:(int index){
+            setState((){
+              _selectedTab = index;
+            }); //setState
+          }, //onTap
+          items: [
+            BottomNavigationBarItem(
+              icon: Icon(Icons.home),
+              title: Text('Home'),
             ),
-            Card(
-              elevation: 5.0,
-              margin: EdgeInsets.all(20.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0)),
-              child: buildListTile(
-                "Send Feedback",
-                Icons.help,
-                () => Navigator.of(context).push(MaterialPageRoute(
-                    builder: (BuildContext context) => SendFeedback())),
-              ), //opens a new page which allows users to submit feedback
+            BottomNavigationBarItem(
+              icon: Icon(Icons.attach_money),
+              title: Text('Transactions'),
             ),
-            Card(
-              elevation: 5.0,
-              margin: EdgeInsets.all(20.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0)),
-              child: buildListTile(
-                "Top Up Meal Plan",
-                Icons.cake,
-                _launchURL,
-              ),
+             BottomNavigationBarItem(
+              icon: Icon(Icons.map),
+              title: Text('Location Spending'),
             ),
-            Card(
-              elevation: 5.0,
-              margin: EdgeInsets.all(20.0),
-              shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25.0)),
-              child: buildListTile(
-                "Logout",
-                Icons.exit_to_app,
-                null,
-              ),
+            BottomNavigationBarItem(
+              icon: Icon(Icons.settings),
+              title: Text('Settings'),
             ),
-          ],
+          ], 
         ),
-      ),
-    );
+      );
   }
 }

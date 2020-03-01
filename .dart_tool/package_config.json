@@ -32,6 +32,18 @@
       "languageVersion": "1.0"
     },
     {
+      "name": "charts_common",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/charts_common-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "charts_flutter",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/charts_flutter-0.8.1",
+      "packageUri": "lib/",
+      "languageVersion": "1.23"
+    },
+    {
       "name": "collection",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/collection-1.14.11",
       "packageUri": "lib/",
@@ -68,8 +80,26 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "image",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/image-2.1.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "intl",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/intl-0.16.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.5"
+    },
+    {
+      "name": "logging",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/logging-0.11.4",
       "packageUri": "lib/",
       "languageVersion": "2.0"
     },
@@ -80,10 +110,22 @@
       "languageVersion": "2.2"
     },
     {
+      "name": "material_design_icons_flutter",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/material_design_icons_flutter-3.4.4995",
+      "packageUri": "lib/",
+      "languageVersion": "1.19"
+    },
+    {
       "name": "meta",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/meta-1.1.8",
       "packageUri": "lib/",
       "languageVersion": "1.12"
+    },
+    {
+      "name": "nested",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/nested-0.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
     },
     {
       "name": "path",
@@ -102,6 +144,18 @@
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/petitparser-2.4.0",
       "packageUri": "lib/",
       "languageVersion": "2.4"
+    },
+    {
+      "name": "plugin_platform_interface",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/plugin_platform_interface-1.0.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "provider",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/provider-4.0.4",
+      "packageUri": "lib/",
+      "languageVersion": "2.2"
     },
     {
       "name": "quiver",
@@ -158,6 +212,30 @@
       "languageVersion": "2.0"
     },
     {
+      "name": "url_launcher",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher-5.4.2",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "url_launcher_macos",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_macos-0.0.1+4",
+      "packageUri": "lib/",
+      "languageVersion": "2.1"
+    },
+    {
+      "name": "url_launcher_platform_interface",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_platform_interface-1.0.6",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
+      "name": "url_launcher_web",
+      "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/url_launcher_web-0.1.1+1",
+      "packageUri": "lib/",
+      "languageVersion": "2.0"
+    },
+    {
       "name": "vector_math",
       "rootUri": "file:///Users/jackpeplinski/development/flutter/.pub-cache/hosted/pub.dartlang.org/vector_math-2.0.8",
       "packageUri": "lib/",
@@ -170,13 +248,13 @@
       "languageVersion": "2.3"
     },
     {
-      "name": "western_food",
+      "name": "wfn2",
       "rootUri": "../",
       "packageUri": "lib/",
       "languageVersion": "2.1"
     }
   ],
-  "generated": "2020-01-11T17:06:07.379095Z",
+  "generated": "2020-03-01T18:20:28.990347Z",
   "generator": "pub",
   "generatorVersion": "2.7.0"
 }
