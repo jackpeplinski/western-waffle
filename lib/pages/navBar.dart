@@ -1,21 +1,21 @@
 import 'package:flutter/material.dart';
-import '../spendingRate.dart';
-import '../transactionsPage.dart';
-import '../locationSpending.dart';
+import '../home.dart';
+import './transactionsPage.dart';
+import './locationSpending.dart';
 import './settingsPage.dart';
 
-class Home extends StatefulWidget {
+class NavBar extends StatefulWidget {
   @override
-  _HomeState createState() => _HomeState();
+  _NavBarState createState() => _NavBarState();
 }
 
-class _HomeState extends State<Home> {
+class _NavBarState extends State<NavBar> {
 
 //intializes, declares, assigns var (the zero is arbitrary)
   int _selectedTab = 0;
   final List<Widget> _potentialTabs = [
     //pages here must be listed in the same order that they are listed in the navigation bar widget below
-    SpendingRate(),
+    Home(),
     TransactionsPage(),
     LocationSpending(),
     SettingsPage(),

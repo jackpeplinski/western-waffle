@@ -9,7 +9,7 @@ class _BalanceCardState extends State<BalanceCard> {
   @override
   Widget build(BuildContext context) {
     return Card(
-      margin: const EdgeInsets.fromLTRB(16.0, 16.0, 16.0, 0),
+      margin: const EdgeInsets.fromLTRB(20.0, 40.0, 20.0, 20.0),
       child: Padding(
         padding: const EdgeInsets.all(12.0),
         child: Column(

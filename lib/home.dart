@@ -2,12 +2,12 @@ import 'package:charts_flutter/flutter.dart' as charts;
 import 'package:flutter/material.dart';
 import './widgets/balanceCard.dart';
 
-class SpendingRate extends StatefulWidget {
+class Home extends StatefulWidget {
   @override
-  _SpendingRateState createState() => _SpendingRateState();
+  _HomeState createState() => _HomeState();
 }
 
-class _SpendingRateState extends State<SpendingRate> {
+class _HomeState extends State<Home> {
     //creates list w var name _seriesBalanceData
     List<charts.Series<Balance, int>> _seriesBalanceData;
     
