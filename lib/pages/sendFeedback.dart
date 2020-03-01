@@ -104,6 +104,7 @@ class _SendFeedbackState extends State<SendFeedback> {
     return Scaffold(
       appBar: AppBar(
         title: Text("Your Feedback"),
+        backgroundColor: Theme.of(context).accentColor,
       ),
       body: Column(
         children: <Widget>[

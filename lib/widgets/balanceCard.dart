@@ -19,14 +19,14 @@ class _BalanceCardState extends State<BalanceCard> {
               "100",
               style: TextStyle(
                 fontSize: 70.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
             Text(
               "Balance",
               style: TextStyle(
                 fontSize: 14.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ],

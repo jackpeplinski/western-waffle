@@ -25,7 +25,7 @@ class _TransactionsPageState extends State<TransactionsPage> {
             transaction.charge,
               style: TextStyle(
                 fontSize: 70.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
             //location
@@ -33,7 +33,7 @@ class _TransactionsPageState extends State<TransactionsPage> {
               transaction.location,
               style: TextStyle(
                 fontSize: 14.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
             //date
@@ -41,7 +41,7 @@ class _TransactionsPageState extends State<TransactionsPage> {
               transaction.date,
               style: TextStyle(
                 fontSize: 14.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
             //type
@@ -49,7 +49,7 @@ class _TransactionsPageState extends State<TransactionsPage> {
               transaction.transactionType,
               style: TextStyle(
                 fontSize: 14.0,
-                color: Colors.black,
+                color: Theme.of(context).accentColor,
               ),
             ),
           ],
@@ -61,9 +61,13 @@ class _TransactionsPageState extends State<TransactionsPage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      backgroundColor: Colors.grey,
+      backgroundColor: Theme.of(context).canvasColor,
       appBar: AppBar(
-        title: Text('Transactions'),
+        title: Text(
+          'Transactions',
+          style: TextStyle(color: Theme.of(context).primaryColor),
+          ),
+        backgroundColor: Theme.of(context).accentColor,
       ),
       body: Column(
         //makes transactions card appear on screen

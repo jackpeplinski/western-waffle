@@ -40,7 +40,11 @@ class _HomeState extends State<Home> {
     return Column(
     children: <Widget>[
       BalanceCard(),
-      Text('Spending Rate', style: TextStyle(fontSize: 25.0,fontWeight: FontWeight.bold),),
+      Text('Spending Rate', style: TextStyle(
+        fontSize: 25.0,
+        fontWeight: FontWeight.bold,
+        color: Theme.of(context).accentColor,
+        ),),
         Expanded(
           child: charts.LineChart(
             _seriesBalanceData,
@@ -52,11 +56,13 @@ class _HomeState extends State<Home> {
                 'Days',
                 behaviorPosition: charts.BehaviorPosition.bottom,
                 titleOutsideJustification:charts.OutsideJustification.middleDrawArea,
+                titleStyleSpec: charts.TextStyleSpec(color: charts.MaterialPalette.white),
               ),
               charts.ChartTitle(
                 'Purchases', 
                 behaviorPosition: charts.BehaviorPosition.start, 
                 titleOutsideJustification: charts.OutsideJustification.middleDrawArea,
+                titleStyleSpec: charts.TextStyleSpec(color: charts.MaterialPalette.white),
               ),
             ] 
           ),

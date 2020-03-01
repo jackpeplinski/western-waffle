@@ -52,11 +52,11 @@ class _LocationSpendingState extends State<LocationSpending> {
             child: Column(
               children: <Widget>[
                 //creates title
-                Text('Spending by Location',style: TextStyle(
+                /*Text('Spending by Location',style: TextStyle(
                   fontSize: 24.0,
                   fontWeight: FontWeight.bold,
                   color: Theme.of(context).accentColor,
-                  ),),
+                  ),),*/
                 SizedBox(height: 10.0,),
                 Expanded(
                   //creates PieChat
@@ -64,6 +64,7 @@ class _LocationSpendingState extends State<LocationSpending> {
                     _seriesLocationData,
                     animate: true,
                     animationDuration: Duration(seconds: 1),
+                    //legend
                     behaviors: [
                         charts.DatumLegend(
                         outsideJustification: charts.OutsideJustification.endDrawArea,
@@ -72,7 +73,7 @@ class _LocationSpendingState extends State<LocationSpending> {
                         cellPadding: new EdgeInsets.only(right: 4.0, bottom: 4.0),
                         entryTextStyle: charts.TextStyleSpec(
                             color: charts.MaterialPalette.purple.shadeDefault,
-                            fontFamily: 'Georgia',
+                            //fontFamily: 'Georgia',
                             fontSize: 11),
                       )
                     ],

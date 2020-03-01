@@ -23,35 +23,40 @@ class _NavBarState extends State<NavBar> {
 
   @override
   Widget build(BuildContext context) {
-    return  Scaffold(
+    return Scaffold(
         //access _selectedTab from the list of _potentialTabs
         body: _potentialTabs[_selectedTab],
-        bottomNavigationBar: BottomNavigationBar(
-          currentIndex: _selectedTab,
-          //change page displayed to _selectedTab .
-          onTap:(int index){
-            setState((){
-              _selectedTab = index;
-            }); //setState
-          }, //onTap
-          items: [
-            BottomNavigationBarItem(
-              icon: Icon(Icons.home),
-              title: Text('Home'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.attach_money),
-              title: Text('Transactions'),
-            ),
-             BottomNavigationBarItem(
-              icon: Icon(Icons.map),
-              title: Text('Location Spending'),
-            ),
-            BottomNavigationBarItem(
-              icon: Icon(Icons.settings),
-              title: Text('Settings'),
-            ),
-          ], 
+        bottomNavigationBar: Theme(
+          data: Theme.of(context).copyWith(
+            canvasColor: Theme.of(context).accentColor,
+          ),
+            child: BottomNavigationBar(
+            currentIndex: _selectedTab,
+            //change page displayed to _selectedTab .
+            onTap:(int index){
+              setState((){
+                _selectedTab = index;
+              }); //setState
+            }, //onTap
+            items: [
+              BottomNavigationBarItem(
+                icon: Icon(Icons.home),
+                title: Text('Home'),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.attach_money),
+                title: Text('Transactions'),
+              ),
+               BottomNavigationBarItem(
+                icon: Icon(Icons.map),
+                title: Text('Location Spending'),
+              ),
+              BottomNavigationBarItem(
+                icon: Icon(Icons.settings),
+                title: Text('Settings'),
+              ),
+            ], 
+          ),
         ),
       );
   }

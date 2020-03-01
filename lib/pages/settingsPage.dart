@@ -14,11 +14,13 @@ class SettingsPage extends StatelessWidget {
     }
   } //opens the URL
 
-  Widget buildListTile(String title, IconData icon, Function tapHandler) {
+  Widget buildListTile(
+      String title, IconData icon, Function tapHandler, BuildContext context) {
     return ListTile(
       leading: Icon(
         icon,
         size: 26.0,
+        color: Theme.of(context).accentColor,
       ),
       title: Text(
         title,
@@ -26,6 +28,7 @@ class SettingsPage extends StatelessWidget {
           fontFamily: 'RobotoCondensed',
           fontSize: 20.0,
           fontWeight: FontWeight.bold,
+          color: Theme.of(context).accentColor,
         ),
       ),
       onTap: tapHandler,
@@ -38,7 +41,11 @@ class SettingsPage extends StatelessWidget {
 
     return Scaffold(
       appBar: AppBar(
-        title: Text("Settings Page"),
+        title: Text(
+          "Settings Page",
+          style: TextStyle(color: Theme.of(context).primaryColor),
+        ),
+        backgroundColor: Theme.of(context).accentColor,
       ),
       body: Container(
         child: Column(
@@ -60,30 +67,26 @@ class SettingsPage extends StatelessWidget {
                     style: TextStyle(
                       fontWeight: FontWeight.bold,
                       fontSize: 30.0,
+                      color: Theme.of(context).accentColor,
                     ),
                   ),
                   buildListTile(
                     "Dark Theme",
                     Icons.invert_colors,
                     () => _themeChanger.setTheme(ThemeData.dark()),
+                    context,
                   ), //sets the theme to dark
-                  buildListTile(
-                    "Light Theme",
-                    Icons.invert_colors,
-                    () => _themeChanger.setTheme(ThemeData.light().copyWith(
-                      accentColor: Colors.orange,
-                    )),
-                  ), //sets the theme to light
                   buildListTile(
                     "Western Theme",
                     Icons.invert_colors,
                     () => _themeChanger.setTheme(
                       ThemeData(
-                        primaryColor: Colors.purple,
+                        primaryColor: Colors.white,
                         canvasColor: Colors.white,
-                        accentColor: Colors.yellow,
+                        accentColor: Colors.purple[400],
                       ),
                     ),
+                    context,
                   ), //sets the theme to dark
                 ],
               ),
@@ -98,6 +101,7 @@ class SettingsPage extends StatelessWidget {
                 Icons.help,
                 () => Navigator.of(context).push(MaterialPageRoute(
                     builder: (BuildContext context) => SendFeedback())),
+                context,
               ), //opens a new page which allows users to submit feedback
             ),
             Card(
@@ -109,6 +113,7 @@ class SettingsPage extends StatelessWidget {
                 "Top Up Meal Plan",
                 Icons.cake,
                 _launchURL,
+                context,
               ),
             ),
             Card(
@@ -120,6 +125,7 @@ class SettingsPage extends StatelessWidget {
                 "Logout",
                 Icons.exit_to_app,
                 null,
+                context,
               ),
             ),
           ],
