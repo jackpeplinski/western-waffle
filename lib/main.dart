@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
 import './blocs/theme.dart';
-import './pages/navBar.dart';
+import './pages/loginPage.dart';
 
 void main() => runApp(WesternFood());
 
@@ -21,7 +21,7 @@ class MaterialAppWithTheme extends StatelessWidget {
   Widget build(BuildContext context) {
     final theme = Provider.of<ThemeChanger>(context);
     return MaterialApp(
-      home: NavBar(),
+      home: LoginPage(),
       theme: theme.getTheme(),
     );
   }
